@@ -1,0 +1,30 @@
+name: HiBasics
+version: '${project.version}'
+main: cz.d12kdev.higames.hgbasics.Hgbasics
+api-version: 1.19
+prefix: HiBasics
+authors: [ d12kdev ]
+description: Basic functions for HiGames Server
+website: pubdev.higamesmc.fun/hgb
+depend: [NBTAPI]
+commands:
+  vanish:
+    description: Vanish player who executed cmd
+    usage: /vanish
+    permission: hgb.vanish
+  invsee:
+    description: View and edit target's (player's) inventory
+    usage: /invsee <player>
+    permission: hgb.invsee
+  esee:
+    description: View and edit target's (player's) ender chest
+    usage: /esee <player>
+    permission: hgb.esee
+  oinvsee:
+    description: View and edit offline target's (player's) inventory!
+    usage: /oinvsee <player>
+    permission: hgb.oinvsee
+  controlplayer:
+    description: Move with player (WASD)
+    usage: /controlplayer <player>
+    permission: hgb.cplr
