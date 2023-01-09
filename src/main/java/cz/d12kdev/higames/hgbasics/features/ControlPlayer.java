@@ -3,10 +3,7 @@ package cz.d12kdev.higames.hgbasics.features;
 import cz.d12kdev.higames.hgbasics.Hgbasics;
 import de.tr7zw.nbtapi.NBTCompound;
 import de.tr7zw.nbtapi.NBTItem;
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -56,8 +53,7 @@ public class ControlPlayer implements CommandExecutor {
                    nw1.setString("plr", targetplr.getName());
                    nw1.applyNBT(w1);
                    ItemMeta w1m = w1.getItemMeta();
-                   w1m.setDisplayName("W (Forward)");
-                   w1.addEnchantment(Enchantment.LOOT_BONUS_MOBS, 3);
+                   w1m.setDisplayName(ChatColor.RESET + "W (Forward)");
                    w1.setItemMeta(w1m);
                    plr.getInventory().addItem(w1);
                }
