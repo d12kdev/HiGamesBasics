@@ -10,9 +10,11 @@ import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -53,6 +55,10 @@ public class ControlPlayer implements CommandExecutor {
                    nw1.setString("act", "forward");
                    nw1.setString("plr", targetplr.getName());
                    nw1.applyNBT(w1);
+                   ItemMeta w1m = w1.getItemMeta();
+                   w1m.setDisplayName("W (Forward)");
+                   w1.addEnchantment(Enchantment.LOOT_BONUS_MOBS, 3);
+                   w1.setItemMeta(w1m);
                    plr.getInventory().addItem(w1);
                }
            }
