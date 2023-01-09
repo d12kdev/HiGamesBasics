@@ -48,6 +48,7 @@ public class ControlPlayer implements CommandExecutor {
                    plr.getInventory().clear();
                    plr.teleport(new Location(tarworld, tx, ty, tz));
                    ItemStack w1 = new ItemStack(Material.BLAZE_ROD);
+                   //NBT
                    NBTItem nw1 = new NBTItem(w1);
                    nw1.setString("act", "forward");
                    nw1.setString("plr", targetplr.getName());
