@@ -55,6 +55,7 @@ public class ControlPlayer implements CommandExecutor {
                    ItemMeta w1m = w1.getItemMeta();
                    w1m.setDisplayName(ChatColor.RESET + "X Forward");
                    w1.setItemMeta(w1m);
+                   plr.getInventory().addItem(w1);
 
                    ItemStack w2 = new ItemStack(Material.BLAZE_ROD);
                    //NBT 2

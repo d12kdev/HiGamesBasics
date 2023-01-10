@@ -1,5 +1,6 @@
 package cz.d12kdev.higames.hgbasics;
 
+import cz.d12kdev.higames.hgbasics.events.ControlPlayerEvent;
 import cz.d12kdev.higames.hgbasics.events.JoinEvent;
 import cz.d12kdev.higames.hgbasics.features.ControlPlayer;
 import cz.d12kdev.higames.hgbasics.features.EnderSee;
@@ -24,6 +25,7 @@ public final class Hgbasics extends JavaPlugin {
     public void onEnable() {
         Bukkit.getLogger().info(prefix + "Waking up...");
         getServer().getPluginManager().registerEvents(new JoinEvent(this), this);
+        getServer().getPluginManager().registerEvents(new ControlPlayerEvent(), this);
         getCommand("vanish").setExecutor(new Vanish(this));
         getCommand("invsee").setExecutor(new InvSee());
         getCommand("esee").setExecutor(new EnderSee());
