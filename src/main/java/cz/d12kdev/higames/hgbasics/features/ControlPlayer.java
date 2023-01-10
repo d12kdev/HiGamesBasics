@@ -47,25 +47,36 @@ public class ControlPlayer implements CommandExecutor {
                    plr.getInventory().clear();
                    plr.teleport(new Location(tarworld, tx, ty, tz));
                    ItemStack w1 = new ItemStack(Material.BLAZE_ROD);
-                   //NBT
+                   //NBT 1
                    NBTItem nw1 = new NBTItem(w1);
-                   nw1.setString("act", "forward");
+                   nw1.setString("act", "xforward");
                    nw1.setString("plr", targetplr.getName());
                    nw1.applyNBT(w1);
                    ItemMeta w1m = w1.getItemMeta();
-                   w1m.setDisplayName(ChatColor.RESET + "W (Forward)");
+                   w1m.setDisplayName(ChatColor.RESET + "X Forward");
                    w1.setItemMeta(w1m);
 
                    ItemStack w2 = new ItemStack(Material.BLAZE_ROD);
-                   //NBT
-                   NBTItem nw2 = new NBTItem(w1);
-                   nw2.setString("act", "back");
+                   //NBT 2
+                   NBTItem nw2 = new NBTItem(w2);
+                   nw2.setString("act", "xback");
                    nw2.setString("plr", targetplr.getName());
-                   nw2.applyNBT(w1);
-                   ItemMeta w2m = w1.getItemMeta();
-                   w2m.setDisplayName(ChatColor.RESET + "S (Back)");
+                   nw2.applyNBT(w2);
+                   ItemMeta w2m = w2.getItemMeta();
+                   w2m.setDisplayName(ChatColor.RESET + "X Back");
                    w2.setItemMeta(w2m);
                    plr.getInventory().addItem(w2);
+
+                   ItemStack w3 = new ItemStack(Material.STICK);
+                   //NBT 3
+                   NBTItem nw3 = new NBTItem(w3);
+                   nw3.setString("act", "zforward");
+                   nw3.setString("plr", targetplr.getName());
+                   nw3.applyNBT(w3);
+                   ItemMeta w3m = w3.getItemMeta();
+                   w3m.setDisplayName(ChatColor.RESET + "Z Forward");
+                   w3.setItemMeta(w2m);
+                   plr.getInventory().addItem(w3);
                }
            }
        }
