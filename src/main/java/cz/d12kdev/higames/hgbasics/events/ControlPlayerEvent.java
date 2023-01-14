@@ -33,11 +33,11 @@ public class ControlPlayerEvent implements Listener {
                 Vector direction2 = target.getLocation().getDirection().subtract(subx);
                 target.setVelocity(direction2);
             } else if(action == "zforward"){
-                Vector addz = new Vector(0.5,0,0);
+                Vector addz = new Vector(0,0,0.5);
                 Vector direction3 = target.getLocation().getDirection().add(addz);
                 target.setVelocity(direction3);
             } else if(action == "zback"){
-                Vector subz = new Vector(0.5, 0, 0);
+                Vector subz = new Vector(0, 0, 0.5);
                 Vector direction4 = target.getLocation().getDirection().subtract(subz);
                 target.setVelocity(direction4);
             }
