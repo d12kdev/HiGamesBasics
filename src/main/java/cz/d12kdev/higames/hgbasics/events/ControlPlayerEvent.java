@@ -25,9 +25,21 @@ public class ControlPlayerEvent implements Listener {
             player.sendActionBar("§c§lError! §r Look into chat");
         } else {
             if(action == "xforward"){
-                Vector add = new Vector(0.5,0,0);
-                Vector direction = target.getLocation().getDirection().add(add);
-                target.setVelocity(direction);
+                Vector addx = new Vector(0.5,0,0);
+                Vector direction1 = target.getLocation().getDirection().add(addx);
+                target.setVelocity(direction1);
+            } else if(action == "xback"){
+                Vector subx = new Vector(0.5, 0, 0);
+                Vector direction2 = target.getLocation().getDirection().subtract(subx);
+                target.setVelocity(direction2);
+            } else if(action == "zforward"){
+                Vector addz = new Vector(0.5,0,0);
+                Vector direction3 = target.getLocation().getDirection().add(addz);
+                target.setVelocity(direction3);
+            } else if(action == "zback"){
+                Vector subz = new Vector(0.5, 0, 0);
+                Vector direction4 = target.getLocation().getDirection().subtract(subz);
+                target.setVelocity(direction4);
             }
         }
     }
