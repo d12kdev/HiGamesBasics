@@ -76,8 +76,19 @@ public class ControlPlayer implements CommandExecutor {
                    nw3.applyNBT(w3);
                    ItemMeta w3m = w3.getItemMeta();
                    w3m.setDisplayName(ChatColor.RESET + "Z Forward");
-                   w3.setItemMeta(w2m);
+                   w3.setItemMeta(w3m);
                    plr.getInventory().addItem(w3);
+
+                   ItemStack w4 = new ItemStack(Material.STICK);
+                   //NBT 3
+                   NBTItem nw4 = new NBTItem(w4);
+                   nw4.setString("act", "zback");
+                   nw4.setString("plr", targetplr.getName());
+                   nw4.applyNBT(w4);
+                   ItemMeta w4m = w4.getItemMeta();
+                   w4m.setDisplayName(ChatColor.RESET + "Z Forward");
+                   w4.setItemMeta(w4m);
+                   plr.getInventory().addItem(w4);
                }
            }
        }
